@@ -1,7 +1,5 @@
 using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Text;
+
 
 namespace Grupp11
 {
@@ -65,13 +63,13 @@ namespace Grupp11
             else if (input.Key == ConsoleKey.D2 || input.Key == ConsoleKey.NumPad2)
             {
                 Console.Clear();
-                PostTest.ReadFile();
+                Reader.ReadFile();
 
             }
             else if (input.Key == ConsoleKey.D3 || input.Key == ConsoleKey.NumPad3)
             {
                 Console.Clear();
-                // Extra.Extras();
+                SortMenu();
 
             }
             else if (input.Key == ConsoleKey.D4 || input.Key == ConsoleKey.NumPad4)
@@ -86,7 +84,40 @@ namespace Grupp11
                 Console.WriteLine("Programmet Stängs av...");
                 Environment.Exit(0);
             }
-            else MainMenu();
+            else SortMenu();
+            
+        }        
+        public static void SortMenu()
+        {
+            Console.Clear();
+            Console.WriteLine("1) Sök titel");
+            Console.WriteLine("2) Sortera datum");
+            Console.WriteLine("3) Skriv ut författare");
+
+
+
+            ConsoleKeyInfo input;
+            input = Console.ReadKey();
+                
+            if (input.Key == ConsoleKey.D1 || input.Key == ConsoleKey.NumPad1)
+            {
+                Console.Clear();
+                Reader.SortTitle();
+
+            }
+            else if (input.Key == ConsoleKey.D2 || input.Key == ConsoleKey.NumPad2)
+            {
+                Console.Clear();
+                Reader.SortDate();
+
+            }
+            else if (input.Key == ConsoleKey.D3 || input.Key == ConsoleKey.NumPad3)
+            {
+                Console.Clear();
+                Reader.SortAuthor();
+
+            }
+            else SortMenu();
             
         }        
 
