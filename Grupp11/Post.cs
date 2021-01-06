@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Text;
+
 
 
 namespace Grupp11
@@ -11,9 +11,15 @@ namespace Grupp11
         public static List<PostList> lists = new List<PostList>();
         public static void NewPost()
         {
+            Console.WriteLine("Tryck Escape för att gå tillbaka till menyn\nTryck Enter för att börja skriva");
+            ConsoleKeyInfo consoleKeyInfo = Console.ReadKey();
+            Console.Clear();
+            if(consoleKeyInfo.Key == ConsoleKey.Escape)
+            {
+                Program.MainMenu();
+            }
             string path = "postlist.txt";
             PostList list = new PostList();
-
             list.dateTime = DateTime.Now.ToString();
             Console.Write("Författare: ");
             list.author = Console.ReadLine();
@@ -59,7 +65,13 @@ namespace Grupp11
             else if (answer == "N")
             {
                 Console.Clear();
-                return;
+                Program.MainMenu();
+            }
+            else
+            {
+                Console.Clear();
+                Console.WriteLine("Försök igen: ");
+                RemoveText();
             }
             Program.MainMenu();
         }
