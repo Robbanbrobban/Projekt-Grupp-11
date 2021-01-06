@@ -1,0 +1,57 @@
+Journal OOP Projekt 21/12
+Planering och uppstart
+
+Projekt att skapa en dagbok/blogg
+Krav
+*Välkomstmeny med "bild" och två alternativ börja blogga eller stäng av.
+*Första-meny med olika alternativ (t.ex nytt inlägg)
+	1.Nytt inlägg
+		1.Forsätt skriva som tidigare användare
+			1.Välj användare med hjälp av listan
+				1.Skriv Rubrik
+					1.Skriv text
+		
+		2.Ny användare
+
+	2.Läs tidigare inlägg(med datum när du skrivit inlägget)
+		1.Sortera inlägg efter datum
+		2.Listar Rubriker så användaren kan välja rubrik
+		3.Söka rubriker
+
+	3.Ta bort inlägg
+		1.Välj användare
+			1.Välj Rubrik
+				1.Ta bort Text (är du säker på att du vill ta bort inlägget ja/nej)
+
+	4.Välj författare
+		1. Lista med alla författare.
+
+	5.Stänger av dagbok
+
+*Meny för varje alternativ
+	*När du skrivit klart i nytt inlägg ha alternativ-
+att fortsätta skriva eller gå tillbaka till huvudmenyn.
+	* vi gör en instans av datetime när användaren sparar så sparas tid/datum
+	*
+Viktigt att användaren ska inte få möjlighet att skriva fel samt att den ska kunna fortsätta skriva utan att behöva starta om!
+console.writeline("Skriv din text !:D tryck esc för att gå tillbaka utan att spara, tryck enter två ggr för att spara inlägget");
+textstycke[] = string txt
+	for{
+	textstycke = console.readline();
+
+ReadAllLines gör det till en sträng array
+Köra med utf8 encoding
+
+for/while loop som skapar en sträng tills den bryts
+skapa en array som loopar text tills den bryts av något
+skapa get set för author, title, text
+
+Följa List diary och i varje fält spara som text dokument
+
+skapa text dokument
+skriv text
+statment för radbrytning eller avbryta
+skriva in authors i en lista som man sedan skriver ut
+lista för author
+skapa text utifrån författare
+

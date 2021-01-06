@@ -1,0 +1,16 @@
+C:\Skola\GIK299\Projekt\Projekt-grupp11-test\Projekt-test\bin\Debug\net5.0\Projekt-test.exe
+C:\Skola\GIK299\Projekt\Projekt-grupp11-test\Projekt-test\bin\Debug\net5.0\Projekt-test.deps.json
+C:\Skola\GIK299\Projekt\Projekt-grupp11-test\Projekt-test\bin\Debug\net5.0\Projekt-test.runtimeconfig.json
+C:\Skola\GIK299\Projekt\Projekt-grupp11-test\Projekt-test\bin\Debug\net5.0\Projekt-test.runtimeconfig.dev.json
+C:\Skola\GIK299\Projekt\Projekt-grupp11-test\Projekt-test\bin\Debug\net5.0\Projekt-test.dll
+C:\Skola\GIK299\Projekt\Projekt-grupp11-test\Projekt-test\bin\Debug\net5.0\ref\Projekt-test.dll
+C:\Skola\GIK299\Projekt\Projekt-grupp11-test\Projekt-test\bin\Debug\net5.0\Projekt-test.pdb
+C:\Skola\GIK299\Projekt\Projekt-grupp11-test\Projekt-test\obj\Debug\net5.0\Projekt-test.csprojAssemblyReference.cache
+C:\Skola\GIK299\Projekt\Projekt-grupp11-test\Projekt-test\obj\Debug\net5.0\Projekt-test.GeneratedMSBuildEditorConfig.editorconfig
+C:\Skola\GIK299\Projekt\Projekt-grupp11-test\Projekt-test\obj\Debug\net5.0\Projekt-test.AssemblyInfoInputs.cache
+C:\Skola\GIK299\Projekt\Projekt-grupp11-test\Projekt-test\obj\Debug\net5.0\Projekt-test.AssemblyInfo.cs
+C:\Skola\GIK299\Projekt\Projekt-grupp11-test\Projekt-test\obj\Debug\net5.0\Projekt-test.csproj.CoreCompileInputs.cache
+C:\Skola\GIK299\Projekt\Projekt-grupp11-test\Projekt-test\obj\Debug\net5.0\Projekt-test.dll
+C:\Skola\GIK299\Projekt\Projekt-grupp11-test\Projekt-test\obj\Debug\net5.0\ref\Projekt-test.dll
+C:\Skola\GIK299\Projekt\Projekt-grupp11-test\Projekt-test\obj\Debug\net5.0\Projekt-test.pdb
+C:\Skola\GIK299\Projekt\Projekt-grupp11-test\Projekt-test\obj\Debug\net5.0\Projekt-test.genruntimeconfig.cache
