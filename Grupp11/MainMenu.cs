@@ -5,7 +5,7 @@ namespace Grupp11
 {
     class Program
     {
-       static void Main(string[] args)
+        static void Main(string[] args)
         {
             WelcomeMenu();
 
@@ -15,14 +15,14 @@ namespace Grupp11
         {
             Console.ForegroundColor = ConsoleColor.DarkYellow;
             Console.Clear();
-            Console.WriteLine("Hej och Välkommen till\r\n");
+            Console.WriteLine("                      Hej och Välkommen till\r\n");
             Console.WriteLine(" █████  ██      ███████ ██   ██ ███████ ██ ███    ███ ███████ ██████  ");
             Console.WriteLine("██   ██ ██         ███  ██   ██ ██      ██ ████  ████ ██      ██   ██ ");
             Console.WriteLine("███████ ██        ███   ███████ █████   ██ ██ ████ ██ █████   ██████  ");
             Console.WriteLine("██   ██ ██       ███    ██   ██ ██      ██ ██  ██  ██ ██      ██   ██ ");
             Console.WriteLine("██   ██ ███████ ███████ ██   ██ ███████ ██ ██      ██ ███████ ██   ██ ");
             Console.WriteLine("\r\nDetta är ett verktyg för dig med Alzheimer att komma ihåg saker");
-            Console.WriteLine("Tryck 1 för att starta\r\nTryck 2 för att stänga av\r\n");
+            Console.WriteLine("Tryck 1 för att starta verktyget.\r\nTryck 2 för att stänga av\r\n");
 
             ConsoleKeyInfo input;
             input = Console.ReadKey();
@@ -53,7 +53,7 @@ namespace Grupp11
 
             ConsoleKeyInfo input;
             input = Console.ReadKey();
-                
+
             if (input.Key == ConsoleKey.D1 || input.Key == ConsoleKey.NumPad1)
             {
                 Console.Clear();
@@ -81,24 +81,24 @@ namespace Grupp11
             else if (input.Key == ConsoleKey.D5 || input.Key == ConsoleKey.NumPad5)
             {
                 Console.Clear();
-                Console.WriteLine("Programmet Stängs av...");
-                Environment.Exit(0);
+                ShutDown();
             }
             else SortMenu();
-            
-        }        
+
+        }
         public static void SortMenu()
         {
             Console.Clear();
             Console.WriteLine("1) Sök titel");
             Console.WriteLine("2) Sortera datum");
             Console.WriteLine("3) Skriv ut författare");
+            Console.WriteLine("4) Gå tillbaka till huvudmenyn");
 
 
 
             ConsoleKeyInfo input;
             input = Console.ReadKey();
-                
+
             if (input.Key == ConsoleKey.D1 || input.Key == ConsoleKey.NumPad1)
             {
                 Console.Clear();
@@ -117,10 +117,45 @@ namespace Grupp11
                 Reader.SortAuthor();
 
             }
-            else SortMenu();
-            
-        }        
+            else if (input.Key == ConsoleKey.D4 || input.Key == ConsoleKey.NumPad4)
+            {
+                Console.Clear();
+                MainMenu();
 
+            }
+            else
+            {
+                SortMenu();
+            }
+        }
+
+
+
+
+        public static void ShutDown()
+        {
+            Console.WriteLine("Är du säker på att du vill avsluta programmet? tryck j=ja n=nej\nj/n");
+            ConsoleKeyInfo input;
+            input = Console.ReadKey();
+            if (input.Key == ConsoleKey.J) 
+            {
+                Console.Clear();
+                Console.WriteLine("Programmet Stängs av...");
+                Environment.Exit(0);
+            }
+            else if (input.Key == ConsoleKey.N)
+            {
+                Console.Clear();
+                MainMenu();
+            }
+            else
+            {
+                ShutDown();
+            }
+        }
     }
 }
+
+
+
 
