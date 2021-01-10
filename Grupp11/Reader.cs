@@ -6,11 +6,12 @@ namespace Grupp11
 {
     class Reader
     {
-
+        public static PostList list = new PostList();
+        public static readonly string Txt = "postlist.txt";
+        public static int titelFound = 1;
         public static void ReadFile()
         {
             CreateNewTextFile();
-            PostList list = new PostList();
             string[] lines = list.TextFile.Split('\t');
             foreach (string name in lines)
             {
@@ -18,12 +19,11 @@ namespace Grupp11
             }
             Console.WriteLine("Tryck på en knapp för att gå tillbaka till Menyn");
             Console.ReadKey();
-            Grupp11.Program.MainMenu();
+            Program.MainMenu();
         }
         public static void SortTitle()
         {
             CreateNewTextFile();
-            PostList list = new PostList();
             int braTitel = 0;
             string[] lines = list.TextFile.Split('\t');
             Console.WriteLine("Skriv titeln du vill söka på");
@@ -59,9 +59,8 @@ namespace Grupp11
         public static void SortDate()
         {
 
-            PostList list = new PostList();
             int braDatum = 0;
-            string[] lines = list.TextFile.Split('\r', '\n');
+            string[] lines = list.TextFile.Split('\n', '\r');
             string[] dateSort = new string[lines.Length];
             for (int i = 0; i <= lines.Length - 1; i++)
             {
@@ -100,7 +99,6 @@ namespace Grupp11
         public static void SortAuthor()
         {
             CreateNewTextFile();
-            PostList list = new PostList();
             int braForfattare = 0;
             string[] lines = list.TextFile.Split('\t');
             Console.WriteLine("Lista på författare");
@@ -133,12 +131,20 @@ namespace Grupp11
         }
         public static void CreateNewTextFile()
         {
-            string path = "postlist.txt";
-            using (StreamWriter sw = new StreamWriter(path, true))
+            if (!File.Exists("postlist.txt"))
             {
+                string path = "postlist.txt";
+                using (StreamWriter sw = new StreamWriter(path, true))
+                {
 
+                }
+                Console.WriteLine("Här var det tomt, skapar en ny textfil");
             }
-            Console.WriteLine("Här var det tomt, skapar en ny textfil");
+            else if (new FileInfo("postlist.txt").Length == 0)
+            {
+                Console.WriteLine("Text dokumentet finns, men innehåller ännu inget inlägg.\nSkriv ett inlägg först för att kunna läsa/sortera inlägg.");
+            }
+
         }
     }
 
